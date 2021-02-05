@@ -6,7 +6,7 @@ const Vision = () => {
         <div className="vision" id="vision">
             <img className="vision-bg" src={visionBg} alt="bg" />
             <div className="vision-content">
-                <div className="home-title">Vision</div>
+                <div className="home-title">Our Vision</div>
                 <p>We have been organising Women Techies with a goal to encourage and facilitate the participation of women in the tech space.</p>
                 <p>Knowing that our efforts benefit so many talented women and being able to see the satisfaction on our participant’s faces makes all of us extremely proud in the work that we do.</p>
             </div>
