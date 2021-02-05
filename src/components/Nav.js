@@ -1,7 +1,7 @@
 import { HashRouter as Router, Route} from "react-router-dom";
 import { useState } from "react";
 import { NavLink } from 'react-router-dom';
-import logo from './../assets/dsc-logo.png';
+import dscLogo from './../assets/dsc-logo.png';
 import Modal from './Modal'
 
 const Nav = () => {
@@ -22,19 +22,19 @@ const Nav = () => {
             <Route path="/" render={() => (
                 <>
                     <header>
-                        <a href="https://dscvit.com/" target="_blank" rel="noreferrer"><img className="logo" src={logo} alt="DSC Logo" /></a>
+                        <a href="https://dscvit.com/" target="_blank" rel="noreferrer"><img className="dsc-logo" src={dscLogo} alt="DSC Logo" /></a>
                         <nav>
                             <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
                                 <li><NavLink to="" exact activeClassName='nav-active'>Home</NavLink></li>
                                 <li><NavLink to="about-dsc" exact activeClassName='nav-active'>About DSC</NavLink></li>
                                 <li><NavLink to="hackathon" exact activeClassName='nav-active'>Hackathon</NavLink></li>
                                 <li><NavLink to="vision" exact activeClassName='nav-active'>Vision</NavLink></li>
-                                <li><NavLink to="teaser" exact activeClassName='nav-active'>Teaser</NavLink></li>
-                                <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li>
-                                <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li>
+                                {/* <li><NavLink to="teaser" exact activeClassName='nav-active' onClick={() => setShow(true)}>Teaser</NavLink></li> */}
+                                {/* <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li> */}
+                                {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
                                 <li><NavLink to="sponsors" exact activeClassName='nav-active'>Sponsors</NavLink></li>
-                                <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li>
-                                <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li>
+                                {/* <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li> */}
+                                {/* <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li> */}
                                 <Modal show={show} onClose={() => setShow(false)} />
                             </ul>
                         </nav>
