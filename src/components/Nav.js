@@ -19,14 +19,14 @@ const Nav = () => {
                         <a href="https://dscvit.com/" target="_blank" rel="noreferrer"><img className="dsc-logo" src={dscLogo} alt="DSC Logo" /></a>
                         <nav>
                             <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-                                <li><NavLink to="" exact activeClassName='nav-home-active' onClick={menuOpen ? onClick : null}>Home</NavLink></li>
-                                <li><NavLink to="about-dsc" exact activeClassName='nav-about-active' onClick={menuOpen ? onClick : null}>About DSC</NavLink></li>
-                                <li><NavLink to="hackathon" exact activeClassName='nav-hack-active' onClick={menuOpen ? onClick : null}>Hackathon</NavLink></li>
-                                <li><NavLink to="vision" exact activeClassName='nav-vision-active' onClick={menuOpen ? onClick : null}>Vision</NavLink></li>
+                                <li><NavLink className="nav-home" to="" exact activeClassName='nav-home-active' onClick={menuOpen ? onClick : null}>Home</NavLink></li>
+                                <li><NavLink className="nav-about" to="about-dsc" exact activeClassName='nav-about-active' onClick={menuOpen ? onClick : null}>About DSC</NavLink></li>
+                                <li><NavLink className="nav-hack" to="hackathon" exact activeClassName='nav-hack-active' onClick={menuOpen ? onClick : null}>Hackathon</NavLink></li>
+                                <li><NavLink className="nav-vision" to="vision" exact activeClassName='nav-vision-active' onClick={menuOpen ? onClick : null}>Vision</NavLink></li>
                                 {/* <li><NavLink to="teaser" exact activeClassName='nav-active' onClick={() => setShow(true)}>Teaser</NavLink></li> */}
                                 {/* <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li> */}
                                 {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
-                                <li><NavLink to="sponsors" exact activeClassName='nav-sponsors-active' onClick={menuOpen ? onClick : null}>Sponsors</NavLink></li>
+                                <li><NavLink className="nav-sponsors" to="sponsors" exact activeClassName='nav-sponsors-active' onClick={menuOpen ? onClick : null}>Sponsors</NavLink></li>
                                 {/* <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li> */}
                                 {/* <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li> */}
                                 <Modal show={show} onClose={() => setShow(false)} />

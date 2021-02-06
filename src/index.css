@@ -69,7 +69,22 @@ header {
 }
 .nav-links li a:hover{
   color: var(--Pink);
+}
+.nav-links li .nav-home:hover, .nav-links li .nav-hack:hover {
+  color: var(--Pink);
   border-bottom: var(--Pink) solid 5px;
+}
+.nav-links li .nav-about:hover {
+  color: var(--Purple);
+  border-bottom: var(--Purple) solid 5px;
+}
+.nav-links li .nav-vision:hover {
+  color: #FFA757;
+  border-bottom: #FFA757 solid 5px;
+}
+.nav-links li .nav-sponsors:hover {
+  color: #FF993B;
+  border-bottom: #FF993B solid 5px;
 }
 .nav-links li .nav-home-active, .nav-links li .nav-hack-active {
   color: var(--Pink);
@@ -523,13 +538,10 @@ header {
   }
   .first {
     position: relative;
-    top: -10vh;
+    top: -20vh;
     right: -5vw;
     width: 50vw;
     margin: 0 auto;
-  }
-  .first-logo{
-    max-width: 300px;
   }
   .first-logo svg {
     margin: 10px auto;
@@ -543,8 +555,7 @@ header {
   }
   .first .button {
     height: 40px;
-    width: 50%;
-    min-width: 250px;
+    width: 300px;
     padding: 0px 5px;
     border-radius: 25px;
     font-size: 20px;
@@ -664,6 +675,9 @@ header {
   }
 }
 @media screen and (min-width:1500px) {
+  .first {
+    top: -10vh;
+  }
   .first .button {
     height: 50px;
     max-width: 350px;
