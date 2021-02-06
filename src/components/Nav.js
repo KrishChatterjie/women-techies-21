@@ -9,14 +9,8 @@ const Nav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [show, setShow] = useState(false);
 
-    const onClick = () => {
-        if (!menuOpen) {
-            setMenuOpen(true);
-        }
-        else {
-            setMenuOpen(false);
-        }
-    }
+    const onClick = () => setMenuOpen(!menuOpen);
+    
     return (
         <Router hashType='noslash'>
             <Route path="/" render={() => (

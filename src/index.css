@@ -135,17 +135,24 @@ header {
     transition: all 0.4s ease-in;
     border-bottom-left-radius: 30px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1),
-      0px -10px 0px #FBFBFB;
+    0px -11px 0px #FBFBFB;
+    padding-bottom: 10px;
   }
   .nav-links li a{
     font-size: 18px;
     font-weight: 500;
+    padding: 13px 10px;
   }
   .nav-links li {
     margin: 10px 10px;
   }
   .nav-links li a:hover, .nav-links li a{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     border-bottom: none !important;
+    color: initial;
+
   }
   .nav-links.open{
     transform: translateX(0%);
