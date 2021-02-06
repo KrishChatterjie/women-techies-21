@@ -10,7 +10,7 @@ const Home = () => {
 
     const [show, setShow] = useState(false);
 
-    document.onmouseup = () => {
+    const hisom = () => {
         var text = "";
         if (window.getSelection) {
             text = window.getSelection().toString();
@@ -22,6 +22,10 @@ const Home = () => {
             setShow(true)
         }
     }
+
+    document.onmouseup = hisom
+    document.onpointerup = hisom
+
     return (
         <div className="home" id="home">
             <Intro />
