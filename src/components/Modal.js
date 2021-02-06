@@ -14,6 +14,7 @@ const Modal = ({ show, onClose}) => {
             <div className="modal" onClick={onClose}>
                 <div className="modal-content" onClick={e => e.stopPropagation()}>
                     <div className="modal-header">
+                        <div className="modal-title">The Face of DSC</div>
                         <button onClick={onClose}><img src={cancel} alt="X"/></button>
                     </div>
                     <div className="modal-body">

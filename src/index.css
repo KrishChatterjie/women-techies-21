@@ -112,7 +112,7 @@ header {
   transform: rotate(-45deg) translate(5px,-5px);
   transition: all 0.5s ease-in-out;
 }
-@media screen and (max-width:860px){
+@media screen and (max-width:900px){
   header{
     overflow-x: hidden;
   }
@@ -143,7 +143,7 @@ header {
   .nav-links li {
     margin: 10px 10px;
   }
-  .nav-links li a:hover, .nav-links li{
+  .nav-links li a:hover, .nav-links li a{
     border-bottom: none !important;
   }
   .nav-links.open{
@@ -188,15 +188,21 @@ header {
   border-radius: 15px;
 }
 .modal.enter-done .modal-content {
-  transform: translateY(20px);
+  transform: translateY(40px);
 }
 .modal.exit .modal-content {
   transform: translateY(-200px);
 }
 .modal-header {
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
   transition: all 0.3s ease-in-out;
+}
+.modal-title {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 5px 25px;
 }
 .modal-header button{
   position: relative;
@@ -479,7 +485,7 @@ header {
     grid-column: 1 / -1;
   }
 }
-@media screen and (min-width:860px){
+@media screen and (min-width:900px){
   .home > div{
     flex-direction: row;
     justify-content: space-between;
@@ -490,17 +496,20 @@ header {
     align-items: center;
   }
   .first {
+    position: relative;
+    top: -10vh;
+    right: -5vw;
     width: 50vw;
     margin: 0 auto;
   }
   .first-logo{
-    width: 300px;
+    max-width: 400px;
   }
   .first-logo img {
-    margin: 20px auto;
+    margin: 10px auto;
   }
   .first-soon {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .first-teaser {
     font-size: 15px;
@@ -551,7 +560,7 @@ header {
   }
   .hackathon {
     margin-top: 25vh;
-    padding: 30px 0px;
+    padding: 80px 0px;
   }
   .hackathon > div {
     flex-direction: row-reverse;
@@ -559,8 +568,8 @@ header {
   }
   .hack-bg {
     height: 120%;
-    top: -20%;
-    right: -10%;
+    top: -10%;
+    right: -15%;
   }
   .hack-content {
     align-self: flex-start;
@@ -579,22 +588,22 @@ header {
     padding: 0 50px;
   }
   .vision p {
-    margin: 10px 20px;
+    font-size: 23px;
   }
   .vision-bg {
-    height: 200%;
+    height: 175%;
     top: -20%;
-    left: 0%;
+    left: -5%;
   }
   .vision-img {
     width: 100vw;
-    min-height: 300px;
+    min-height: 400px;
     padding: 0px 10px;
     align-self: flex-end;
   }
   .vision-img img {
-    width: 80%;
-    max-width: 550px;
+    width: 90%;
+    max-width: 600px;
     top: 0;
     right: 0%;
   }
@@ -611,17 +620,20 @@ header {
 } 
 @media screen and (min-width:1500px) {
   .first-img{
-    width: 50vw;
-    height: 40vw;
+    width: 70vw;
+    height: 55vw;
     max-height: 830px;
     margin: 40px 0px;
   }
   .first-img img{
     width: 120%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 40px 0px;
     top: 0px;
     right: -20%;
+  }
+  .home-title {
+    font-size: 54px;
   }
   .about {
     margin-top: 5%;
@@ -629,6 +641,76 @@ header {
   .about-bg {
     height: 150%;
     top: -5%;
+    left: 0%;
+  }
+  .about ul li:first-child{
+    width: 65vw;
+  }
+  .about ul li p{
+    font-size: 23px;
+  }
+  .about-img {
+    bottom: -100px;
+    padding: 0px 10px;
+  }
+  .about-img img {
+    width: 120%;
+    max-width: 1000px;
+  }
+  .hack-bg {
+    right: -10%;
+  }
+  .hack-content p {
+    font-size: 23px;
+  }
+  .hack-img img {
+    width: 90%;
+    max-width: 1000px;
+  }
+  .hackathon .button {
+    height: 50px;
+    width: 250px;
+    border-radius: 25px;
+    font-size: 25px;
+  }
+  .vision {
+    margin-bottom: 40vh;
+    padding: 30px 0px;
+  }
+  .vision .vision-content {
+    padding: 0 50px;
+  }
+  .vision p {
+    font-size: 35px;
+  }
+  .vision-bg {
+    height: 150%;
+    top: -10%;
+    left: 0%;
+  }
+  .vision-img {
+    width: 100vw;
+    min-height: 400px;
+    padding: 0px 10px;
+    align-self: flex-end;
+  }
+  .vision-img img {
+    width: 100%;
+    max-width: 600px;
+    top: -20%;
+    right: 0%;
+  }
+}
+@media screen and (min-width:1875px) {
+  .vision-bg {
+    height: 200%;
+    top: -20%;
     left: -5%;
+  }
+  .vision-img img {
+    width: 100%;
+    max-width: 600px;
+    top: -10%;
+    right: 0%;
   }
 }
