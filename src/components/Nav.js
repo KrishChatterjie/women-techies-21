@@ -28,7 +28,7 @@ const Nav = () => {
                                 <li><NavLink to="" exact activeClassName='nav-home-active' onClick={menuOpen ? onClick : null}>Home</NavLink></li>
                                 <li><NavLink to="about-dsc" exact activeClassName='nav-about-active' onClick={menuOpen ? onClick : null}>About DSC</NavLink></li>
                                 <li><NavLink to="hackathon" exact activeClassName='nav-hack-active' onClick={menuOpen ? onClick : null}>Hackathon</NavLink></li>
-                                <li><NavLink to="vision" exact activeClassName='nav-vision-active' onClick={menuOpen ? onClick : null}>Our Vision</NavLink></li>
+                                <li><NavLink to="vision" exact activeClassName='nav-vision-active' onClick={menuOpen ? onClick : null}>Vision</NavLink></li>
                                 {/* <li><NavLink to="teaser" exact activeClassName='nav-active' onClick={() => setShow(true)}>Teaser</NavLink></li> */}
                                 {/* <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li> */}
                                 {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}

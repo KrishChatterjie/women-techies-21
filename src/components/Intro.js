@@ -9,6 +9,7 @@ const Intro = () => {
                 <div className="first-logo"><img src={logo} alt="WomenTechies21 Logo" /></div>
                 <div className="first-soon">Coming Soon</div>
                 <div className="first-teaser"><BsFillPlayFill style={{ color: '#FC257E', cursor: 'pointer' }} />    Teaser</div>
+                <button className="button">Sign Up for Updates</button>
             </div>
             <div className="first-img"><img src={intro} alt="Women Techies 2021" /></div>
         </div>

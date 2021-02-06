@@ -14,7 +14,7 @@ const Hackathon = () => {
                 </div>
                 <div className="hack-img"><img src={hackImg} alt="WomenTechies21" /></div>
             </div>
-            <button className="button">Register</button>
+            {/* <button className="button">Register</button> */}
         </div>
     )
 }

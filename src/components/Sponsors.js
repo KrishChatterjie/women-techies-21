@@ -11,7 +11,7 @@ import bugsee from './../assets/past-sponsors/bugsee.png'
 const Sponsors = () => {
     return (
         <div className="sponsors" id="sponsors">
-            <div className="sponsors-title"><span>Past Spo</span>n<span>s</span>ors</div>
+            <div className="sponsors-title">Past Sponsors</div>
             <div className="sponsors-gallery">
                <div><img src={cloudsploit} alt="CloudSploit" /></div>
                <div><img src={cmr} alt="CMR" /></div>

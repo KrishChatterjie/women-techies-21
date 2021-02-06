@@ -41,8 +41,8 @@ header {
   right: 0;
   width: 100%;
   z-index: 1;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
-  5px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5),
+  0px 0px 10px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -55,6 +55,7 @@ header {
 }
 .nav-links li {
   margin: 0px 10px;
+  padding: 0px 10px;
 }
 .nav-links li a{
   text-decoration: none;
@@ -112,7 +113,7 @@ header {
   transform: rotate(-45deg) translate(5px,-5px);
   transition: all 0.5s ease-in-out;
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:960px){
   header{
     overflow-x: hidden;
   }
@@ -133,8 +134,8 @@ header {
     transform: translateX(120%);
     transition: all 0.4s ease-in;
     border-bottom-left-radius: 30px;
-    box-shadow: -5px 15px 10px rgba(0, 0, 0, 0.1),
-      0px -15px 0px #FBFBFB;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1),
+      0px -10px 0px #FBFBFB;
   }
   .nav-links li a{
     font-size: 18px;
@@ -372,7 +373,9 @@ header {
 .button {
   height: 36px;
   width: 200px;
-  margin-top: 50px;
+  min-width: 75%;
+  padding: 0px 5px;
+  margin-top: 25px;
   border-radius: 18px;
   background-color: var(--Pink);
   border: solid 1px transparent;
@@ -440,9 +443,6 @@ header {
   color: #FF993B;
   font-size: 30px;
   font-weight: 800;
-}
-.sponsors-title span {
-  padding-top: 3px;
   border-bottom: solid 3px;
 }
 .sponsors .sponsors-gallery {
@@ -467,6 +467,10 @@ header {
   }
 }
 @media screen and (min-width:550px){
+  .first .button {
+    min-width: initial;
+    width: 300px;
+  }
   .first-img img {
     right:-40%;
   }
@@ -507,17 +511,25 @@ header {
     margin: 0 auto;
   }
   .first-logo{
-    max-width: 400px;
+    max-width: 300px;
   }
   .first-logo img {
     margin: 10px auto;
   }
   .first-soon {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .first-teaser {
     font-size: 15px;
     margin: 10px;
+  }
+  .first .button {
+    height: 40px;
+    width: 50%;
+    min-width: 250px;
+    padding: 0px 5px;
+    border-radius: 25px;
+    font-size: 20px;
   }
   .first-img{
     width: 70vw;
@@ -586,16 +598,16 @@ header {
   }
   .vision {
     margin-bottom: 35vh;
-    padding: 30px 0px;
   }
   .vision .vision-content {
     padding: 0 50px;
+    align-self: flex-start;
   }
-  .vision p {
+  /* .vision p {
     font-size: 23px;
-  }
+  } */
   .vision-bg {
-    height: 175%;
+    height: 150%;
     top: -20%;
     left: -5%;
   }
@@ -634,6 +646,12 @@ header {
   }
 }
 @media screen and (min-width:1500px) {
+  .first .button {
+    height: 50px;
+    max-width: 350px;
+    border-radius: 25px;
+    font-size: 25px;
+  }
   .first-img{
     width: 70vw;
     height: 55vw;
@@ -696,7 +714,8 @@ header {
     padding: 0 50px;
   }
   .vision p {
-    font-size: 35px;
+    /* font-size: 35px; */
+    font-size: 23px;
   }
   .vision-bg {
     height: 150%;
