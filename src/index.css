@@ -245,6 +245,9 @@ header {
   flex-direction: column;
   overflow: hidden;
 }
+.home > div {
+  scroll-margin-top: 80px;
+}
 .home div {
   display: flex;
   flex-direction: column;
