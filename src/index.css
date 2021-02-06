@@ -290,6 +290,7 @@ header {
   min-width: 400px;
   position: absolute;
   right: -50%;
+  z-index:-1;
 }
 .home-title {
   font-size: 30px;
@@ -617,10 +618,21 @@ header {
     font-size: 45px;
   }
   .sponsors .sponsors-gallery {
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
     padding: 0px 30px;
   }
-} 
+  .sponsors .sponsors-gallery div:last-child {
+    grid-column: initial;
+  }
+}
+@media screen and (min-width:1000px) {
+  .sponsors .sponsors-gallery {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .sponsors .sponsors-gallery div:last-child {
+    grid-column: 1 / -1;
+  }
+}
 @media screen and (min-width:1500px) {
   .first-img{
     width: 70vw;
