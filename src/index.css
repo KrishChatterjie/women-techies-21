@@ -152,7 +152,18 @@ header {
     -moz-user-select: none;
     border-bottom: none !important;
     color: initial;
-
+  }
+  .nav-links li .nav-home-active:hover, .nav-links li .nav-hack-active:hover {
+    color: var(--Pink);
+  }
+  .nav-links li .nav-about-active:hover {
+    color: var(--Purple);
+  }
+  .nav-links li .nav-vision-active:hover {
+    color: #FFA757;
+  }
+  .nav-links li .nav-sponsors-active:hover {
+    color: #FF993B;
   }
   .nav-links.open{
     transform: translateX(0%);
