@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom"
 import cancel from './../assets/cancel.png';
-import soon from './../assets/coming-soon.png';
+// import soon from './../assets/coming-soon.png';
 import hisom from './../assets/hisom.png';
 import { CSSTransition } from "react-transition-group";
 
