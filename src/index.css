@@ -285,7 +285,7 @@ header {
   width: 90vw;
   margin-top: 5vh;
 }
-.first-logo img {
+.first-logo svg {
   width: 90%;
   max-width: 400px;
 }
@@ -531,7 +531,7 @@ header {
   .first-logo{
     max-width: 300px;
   }
-  .first-logo img {
+  .first-logo svg {
     margin: 10px auto;
   }
   .first-soon {
