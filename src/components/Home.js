@@ -32,13 +32,11 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef }
     document.onpointerup = hisom;
     
     useEffect(() => {
-        window.onload = () => {
-            setIntro(introRef.current.offsetTop);
-            setAbout(aboutRef.current.offsetTop);
-            setHack(hackRef.current.offsetTop);
-            setVision(visionRef.current.offsetTop);
-            setSponsors(sponsorsRef.current.offsetTop);
-        };
+        setIntro(introRef.current.offsetTop);
+        setAbout(aboutRef.current.offsetTop);
+        setHack(hackRef.current.offsetTop);
+        setVision(visionRef.current.offsetTop);
+        setSponsors(sponsorsRef.current.offsetTop);
         window.onscroll = () => {
             setOffset(window.pageYOffset);
             if (offset <= (intro + about)/2) setActive('intro');
@@ -47,7 +45,13 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef }
             else if (offset <= (vision + sponsors)/2) setActive('vision');
             else setActive('sponsors')
         }
-    });
+        setOffset(window.pageYOffset);
+        if (offset <= (intro + about)/2) setActive('intro');
+        else if (offset <= (about + hack)/2) setActive('about');
+        else if (offset <= (hack + vision)/2) setActive('hack');
+        else if (offset <= (vision + sponsors)/2) setActive('vision');
+        else setActive('sponsors')
+    }, [introRef, aboutRef, hackRef, visionRef, sponsorsRef, offset, intro, about, setActive, hack, vision, sponsors]);
 
     return (
         <div className="home" id="home">
