@@ -42,7 +42,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef }) =>
                     {/* <li><NavLink to="teaser" exact activeClassName='nav-active' onClick={() => setShow(true)}>Teaser</NavLink></li> */}
                     {/* <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li> */}
                     {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
-                    <li><span href="javascript:;" className={`nav-sponsors ${(active === 'sponsors') ? "nav-sponsors-active" : ""}`} onClick={sponsorsScroll}>Sponsors</span></li>
+                    <li><span className={`nav-sponsors ${(active === 'sponsors') ? "nav-sponsors-active" : ""}`} onClick={sponsorsScroll}>Sponsors</span></li>
                     {/* <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li> */}
                     {/* <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li> */}
                     <Modal show={show} onClose={() => setShow(false)} />
