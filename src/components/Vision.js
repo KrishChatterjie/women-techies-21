@@ -1,9 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import visionBg from "./../assets/vision-bg.svg";
 import visionImg from "./../assets/vision-img.svg";
 
 const Vision = React.forwardRef(({ setVision }, ref) => {
-
     return (
         <div className="vision" id="vision" ref={ref}>
             <img className="vision-bg" src={visionBg} alt="bg" />

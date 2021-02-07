@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import hackBg from "./../assets/hackathon-bg.svg"
 import hackImg from "./../assets/hackathon-img.svg"
 

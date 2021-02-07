@@ -1,15 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { BsFillPlayFill } from "react-icons/bs";
 import intro from "./../assets/intro-img.svg";
 
 const Intro = React.forwardRef(({ setIntro }, ref) => {
-
-    // useEffect(() => {
-    //     window.onload = () => {
-    //         setIntro(ref.current.getBoundingClientRect().top);
-    //     };
-    // });
-
     return (
         <div className="intro" ref={ref}>
             <div className="first">

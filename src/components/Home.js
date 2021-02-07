@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Intro from "./Intro";
 import About from "./About";
 import Hackathon from "./Hackathon";
@@ -6,7 +6,7 @@ import Vision from "./Vision";
 import Sponsors from "./Sponsors";
 import Modal from './Modal'
 
-const Home = () => {
+const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef }) => {
 
     const [show, setShow] = useState(false);
     const [offset, setOffset] = useState(0);
@@ -15,12 +15,6 @@ const Home = () => {
     const [hack, setHack] = useState(0);
     const [vision, setVision] = useState(0);
     const [sponsors, setSponsors] = useState(0);
-
-    const introRef = useRef(null);
-    const aboutRef = useRef(null);
-    const hackRef = useRef(null);
-    const visionRef = useRef(null);
-    const sponsorsRef = useRef(null);
 
     const hisom = () => {
         var text = "";
@@ -38,24 +32,22 @@ const Home = () => {
     document.onpointerup = hisom;
     
     useEffect(() => {
-        window.onscroll = () => {
-            setOffset(window.pageYOffset)
-        }
-    }, []);
-    useEffect(() => {
-        window.open = () => {
-            setIntro(introRef.current.getBoundingClientRect().top);
-            setAbout(aboutRef.current.getBoundingClientRect().top);
-            setHack(hackRef.current.getBoundingClientRect().top);
-            setVision(visionRef.current.getBoundingClientRect().top);
-            setSponsors(sponsorsRef.current.getBoundingClientRect().top);
+        window.onload = () => {
+            setIntro(introRef.current.offsetTop);
+            setAbout(aboutRef.current.offsetTop);
+            setHack(hackRef.current.offsetTop);
+            setVision(visionRef.current.offsetTop);
+            setSponsors(sponsorsRef.current.offsetTop);
         };
+        window.onscroll = () => {
+            setOffset(window.pageYOffset);
+            if (offset <= (intro + about)/2) setActive('intro');
+            else if (offset <= (about + hack)/2) setActive('about');
+            else if (offset <= (hack + vision)/2) setActive('hack');
+            else if (offset <= (vision + sponsors)/2) setActive('vision');
+            else setActive('sponsors')
+        }
     });
-    console.log("intro outisde ", intro);
-    // console.log(about);
-    // console.log(hack);
-    // console.log(vision);
-    // console.log(sponsors);
 
     return (
         <div className="home" id="home">

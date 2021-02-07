@@ -1,9 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import aboutBg from "./../assets/about-bg.svg"
 import aboutImg from "./../assets/about-img.svg"
 
 const About = React.forwardRef(({ setAbout }, ref) => {
-
     return (
         <div className="about" id="about-dsc" ref={ref}>
             <div>

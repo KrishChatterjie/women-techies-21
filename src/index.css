@@ -66,6 +66,7 @@ header {
   color: #000000;
   transition: all 0.2s ease;
   padding-bottom: 27px;
+  cursor: pointer;
 }
 .nav-links li a:hover{
   color: var(--Pink);

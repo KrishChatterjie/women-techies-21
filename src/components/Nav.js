@@ -1,46 +1,60 @@
-import { HashRouter as Router, Route} from "react-router-dom";
 import { useState } from "react";
-import { NavLink } from 'react-router-dom';
 import dscLogo from './../assets/dsc-logo.png';
-import Modal from './Modal'
+import Modal from './Modal';
 
-const Nav = () => {
+const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef }) => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [show, setShow] = useState(false);
 
     const onClick = () => setMenuOpen(!menuOpen);
-    
-    return (
-        <Router hashType='noslash'>
-            <Route path="/" render={() => (
-                <>
-                    <header>
-                        <a href="https://dscvit.com/" target="_blank" rel="noreferrer"><img className="dsc-logo" src={dscLogo} alt="DSC Logo" /></a>
-                        <nav>
-                            <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-                                <li><NavLink className="nav-home" to="" exact activeClassName='nav-home-active' onClick={menuOpen ? onClick : null}>Home</NavLink></li>
-                                <li><NavLink className="nav-about" to="about-dsc" exact activeClassName='nav-about-active' onClick={menuOpen ? onClick : null}>About DSC</NavLink></li>
-                                <li><NavLink className="nav-hack" to="hackathon" exact activeClassName='nav-hack-active' onClick={menuOpen ? onClick : null}>Hackathon</NavLink></li>
-                                <li><NavLink className="nav-vision" to="vision" exact activeClassName='nav-vision-active' onClick={menuOpen ? onClick : null}>Vision</NavLink></li>
-                                {/* <li><NavLink to="teaser" exact activeClassName='nav-active' onClick={() => setShow(true)}>Teaser</NavLink></li> */}
-                                {/* <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li> */}
-                                {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
-                                <li><NavLink className="nav-sponsors" to="sponsors" exact activeClassName='nav-sponsors-active' onClick={menuOpen ? onClick : null}>Sponsors</NavLink></li>
-                                {/* <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li> */}
-                                {/* <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li> */}
-                                <Modal show={show} onClose={() => setShow(false)} />
-                            </ul>
-                        </nav>
-                        <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={onClick}>
-                            <div className="line1"></div>
-                            <div className="line2"></div>
-                            <div className="line3"></div>
-                        </div>
-                    </header>
-                </>
-            )} />
-        </Router>
+
+    const introScroll = () => {
+        if (menuOpen) onClick();
+        introRef.scrollIntoView();
+    }
+    const aboutScroll = () => {
+        if (menuOpen) onClick();
+        aboutRef.scrollIntoView();
+    }
+    const hackScroll = () => {
+        if (menuOpen) onClick();
+        hackRef.scrollIntoView();
+    }
+    const visionScroll = () => {
+        if (menuOpen) onClick();
+        visionRef.scrollIntoView();
+    }
+    const sponsorsScroll = () => {
+        if (menuOpen) onClick();
+        sponsorsRef.scrollIntoView();
+    }
+
+    return (<>
+        <header>
+            <a href="https://dscvit.com/" target="_blank" rel="noreferrer"><img className="dsc-logo" src={dscLogo} alt="DSC Logo" /></a>
+            <nav>
+                <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+                    <li><a className={`nav-home ${(active === 'intro') ? "nav-home-active" : ""}`} onClick={introScroll}>Home</a></li>
+                    <li><a className={`nav-about ${(active === 'about') ? "nav-about-active" : ""}`} onClick={aboutScroll}>About DSC</a></li>
+                    <li><a className={`nav-hack ${(active === 'hack') ? "nav-hack-active" : ""}`} onClick={hackScroll}>Hackathon</a></li>
+                    <li><a className={`nav-vision ${(active === 'vision') ? "nav-vision-active" : ""}`} onClick={visionScroll}>Vision</a></li>
+                    {/* <li><NavLink to="teaser" exact activeClassName='nav-active' onClick={() => setShow(true)}>Teaser</NavLink></li> */}
+                    {/* <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li> */}
+                    {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
+                    <li><a className={`nav-sponsors ${(active === 'sponsors') ? "nav-sponsors-active" : ""}`} onClick={sponsorsScroll}>Sponsors</a></li>
+                    {/* <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li> */}
+                    {/* <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li> */}
+                    <Modal show={show} onClose={() => setShow(false)} />
+                </ul>
+            </nav>
+            <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={onClick}>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+            </div>
+        </header>
+    </>
     );
 }
 

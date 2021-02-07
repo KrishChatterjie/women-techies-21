@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import balsamiq from './../assets/past-sponsors/balsamiq.png'
 import cloudsploit from './../assets/past-sponsors/cloudsploit.png'
 import cmr from './../assets/past-sponsors/CMR.png'
@@ -10,7 +10,6 @@ import sketch from './../assets/past-sponsors/sketch.png'
 import bugsee from './../assets/past-sponsors/bugsee.png'
 
 const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
-    
     return (
         <div className="sponsors" id="sponsors" ref={ref}>
             <div className="sponsors-title">Past Sponsors</div>
