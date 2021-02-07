@@ -57,7 +57,7 @@ header {
   margin: 0px 10px;
   padding: 0px 10px;
 }
-.nav-links li a{
+.nav-links li span{
   text-decoration: none;
   flex: 1;
   font-size: 20px;
@@ -68,7 +68,7 @@ header {
   padding-bottom: 27px;
   cursor: pointer;
 }
-.nav-links li a:hover{
+.nav-links li span:hover{
   color: var(--Pink);
 }
 .nav-links li .nav-home:hover, .nav-links li .nav-hack:hover {
@@ -154,7 +154,7 @@ header {
     0px -11px 0px #FBFBFB;
     padding-bottom: 10px;
   }
-  .nav-links li a{
+  .nav-links li span{
     font-size: 18px;
     font-weight: 500;
     padding: 13px 10px;
@@ -162,7 +162,7 @@ header {
   .nav-links li {
     margin: 10px 10px;
   }
-  .nav-links li a:hover, .nav-links li a{
+  .nav-links li span:hover, .nav-links li span{
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
