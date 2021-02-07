@@ -1,9 +1,10 @@
+import React, { useRef, useEffect } from 'react';
 import hackBg from "./../assets/hackathon-bg.svg"
 import hackImg from "./../assets/hackathon-img.svg"
 
-const Hackathon = () => {
+const Hackathon = React.forwardRef(({ setHack }, ref) => {
     return (
-        <div className="hackathon" id="hackathon">
+        <div className="hackathon" id="hackathon" ref={ref}>
             <div>
                 <div className="hack-content">
                     <img className="hack-bg" src={hackBg} alt="bg" />
@@ -17,6 +18,6 @@ const Hackathon = () => {
             {/* <button className="button">Register</button> */}
         </div>
     )
-}
+});
 
 export default Hackathon;

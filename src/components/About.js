@@ -1,9 +1,11 @@
+import React, { useRef, useEffect } from 'react';
 import aboutBg from "./../assets/about-bg.svg"
 import aboutImg from "./../assets/about-img.svg"
 
-const About = () => {
+const About = React.forwardRef(({ setAbout }, ref) => {
+
     return (
-        <div className="about" id="about-dsc">
+        <div className="about" id="about-dsc" ref={ref}>
             <div>
                 <img className="about-bg" src={aboutBg} alt="bg" />
                 <ul>
@@ -20,6 +22,6 @@ const About = () => {
             <div className="about-img"><img src={aboutImg} alt="WomenTechies21" /></div>
         </div>
     )
-}
+});
 
 export default About;

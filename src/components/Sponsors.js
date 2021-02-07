@@ -1,3 +1,4 @@
+import React, { useRef, useEffect } from 'react';
 import balsamiq from './../assets/past-sponsors/balsamiq.png'
 import cloudsploit from './../assets/past-sponsors/cloudsploit.png'
 import cmr from './../assets/past-sponsors/CMR.png'
@@ -8,9 +9,10 @@ import seaport from './../assets/past-sponsors/SEAPORT.png'
 import sketch from './../assets/past-sponsors/sketch.png'
 import bugsee from './../assets/past-sponsors/bugsee.png'
 
-const Sponsors = () => {
+const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
+    
     return (
-        <div className="sponsors" id="sponsors">
+        <div className="sponsors" id="sponsors" ref={ref}>
             <div className="sponsors-title">Past Sponsors</div>
             <div className="sponsors-gallery">
                <div><img src={cloudsploit} alt="CloudSploit" /></div>
@@ -25,6 +27,6 @@ const Sponsors = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Sponsors;

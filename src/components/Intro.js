@@ -1,9 +1,17 @@
+import React, { useRef, useEffect } from 'react';
 import { BsFillPlayFill } from "react-icons/bs";
 import intro from "./../assets/intro-img.svg";
 
-const Intro = () => {
+const Intro = React.forwardRef(({ setIntro }, ref) => {
+
+    // useEffect(() => {
+    //     window.onload = () => {
+    //         setIntro(ref.current.getBoundingClientRect().top);
+    //     };
+    // });
+
     return (
-        <div className="intro">
+        <div className="intro" ref={ref}>
             <div className="first">
                 <div className="first-logo">
                     {/* <svg src={logo} alt="WomenTechies21 Logo" /> */}
@@ -32,6 +40,6 @@ const Intro = () => {
             <div className="first-img"><img src={intro} alt="Women Techies 2021" /></div>
         </div>
     )
-}
+})
 
 export default Intro;

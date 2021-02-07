@@ -1,9 +1,11 @@
-import visionBg from "./../assets/vision-bg.svg"
-import visionImg from "./../assets/vision-img.svg"
+import React, { useRef, useEffect } from 'react';
+import visionBg from "./../assets/vision-bg.svg";
+import visionImg from "./../assets/vision-img.svg";
 
-const Vision = () => {
+const Vision = React.forwardRef(({ setVision }, ref) => {
+
     return (
-        <div className="vision" id="vision">
+        <div className="vision" id="vision" ref={ref}>
             <img className="vision-bg" src={visionBg} alt="bg" />
             <div className="vision-content">
                 <div className="home-title">Our Vision</div>
@@ -12,7 +14,7 @@ const Vision = () => {
             </div>
             <div className="vision-img"><img src={visionImg} alt="WomenTechies21" /></div>
         </div>
-    )
-}
+    );
+})
 
 export default Vision;
