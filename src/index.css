@@ -464,8 +464,7 @@ header {
   right: 10%;
 }
 .sponsors {
-  width: 70vw;
-  max-width: 800px;
+  width: 80vw;
   margin: 30px auto;
 }
 .sponsors .sponsors-title {
@@ -479,12 +478,20 @@ header {
   border-bottom: solid 3px;
 }
 .sponsors .sponsors-gallery {
+  max-width: 100%;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 50% 50%;
+}
+.sponsors .sponsors-gallery div:last-child {
+  grid-column: 1 / -1;
 }
 .sponsors-gallery img{
   margin: 20px auto;
   padding: 0px 20px;
+  max-width: 100%;
+}
+.sponsors .sponsors-gallery div:last-child img {
+  max-width: 50%;
 }
 @media screen and (min-width:400px){
   .first-soon {
@@ -522,9 +529,7 @@ header {
   .sponsors .sponsors-gallery {
     grid-template-columns: 50% 50%;
   }
-  .sponsors .sponsors-gallery div:last-child {
-    grid-column: 1 / -1;
-  }
+  
 }
 @media screen and (min-width:900px){
   .home > div{
@@ -662,16 +667,25 @@ header {
     grid-template-columns: 33.33% 33.33% 33.33%;
     padding: 0px 30px;
   }
+  .sponsors .sponsors-gallery div {
+    margin: 0px 30px;
+  }
   .sponsors .sponsors-gallery div:last-child {
     grid-column: initial;
   }
 }
 @media screen and (min-width:1000px) {
+  .home .sponsors {
+    width: 80vw;
+  }
   .sponsors .sponsors-gallery {
     grid-template-columns: 25% 25% 25% 25%;
   }
   .sponsors .sponsors-gallery div:last-child {
     grid-column: 1 / -1;
+  }
+  .sponsors .sponsors-gallery div:last-child img {
+    max-width: 25%;
   }
 }
 @media screen and (min-width:1500px) {
