@@ -35,6 +35,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
+  padding-top: 15px;
   transition: 0.5s ease-in;
   position: fixed;
   top: 0;
@@ -45,6 +46,9 @@ header {
   0px 0px 10px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+header a {
+  margin-left: 2%;
 }
 .dsc-logo {
   height: 65px;
@@ -129,7 +133,7 @@ header {
   transform: rotate(-45deg) translate(5px,-5px);
   transition: all 0.5s ease-in-out;
 }
-@media screen and (max-width:960px){
+@media screen and (max-width:978px){
   header{
     overflow-x: hidden;
   }
@@ -142,7 +146,7 @@ header {
     position: fixed;
     width: 50%;
     right: 0px;
-    top: 60px;
+    top: 65px;
     background-color: #FBFBFB;
     display: flex;
     flex-direction: column;
@@ -313,6 +317,7 @@ header {
   font-size: 10px;
   color: #000000;
   font-weight: 500;
+  text-decoration: none;
 }
 .first-img {
   position: relative;
@@ -553,7 +558,7 @@ header {
     margin: 10px auto;
   }
   .first-soon {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .first-teaser {
     font-size: 15px;
@@ -698,6 +703,18 @@ header {
 @media screen and (min-width:1500px) {
   .first {
     top: -10vh;
+  }
+  .first-logo {
+    max-width: none;
+  }
+  .first-logo svg{
+    margin: 10px 0;
+    max-width: none;
+    width: 50%;
+    transform: scale(1.25)
+  }
+  .first-soon {
+    font-size: 4rem;
   }
   .first .button {
     height: 50px;
