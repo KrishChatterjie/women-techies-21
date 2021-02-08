@@ -12,6 +12,8 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 body::-webkit-scrollbar-track{
   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
