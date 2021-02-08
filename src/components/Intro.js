@@ -26,7 +26,7 @@ const Intro = React.forwardRef(({ setIntro }, ref) => {
                     </svg>
 
                 </div>
-                <div className="first-soon">Coming Soon!!</div>
+                <div className="first-soon">Coming Soon</div>
                 <a href="https://www.instagram.com/reel/CLBd9tWBIGY/?igshid=1uga220uun2gt" target="_blank" rel="noreferrer" className="first-teaser"><BsFillPlayFill style={{ color: '#FC257E', cursor: 'pointer' }} />    Recap</a>
                 <button className="button">Sign Up for Updates</button>
             </div>

@@ -133,7 +133,7 @@ header a {
   transform: rotate(-45deg) translate(5px,-5px);
   transition: all 0.5s ease-in-out;
 }
-@media screen and (max-width:978px){
+@media screen and (max-width:1050px){
   header{
     overflow-x: hidden;
   }
@@ -311,6 +311,14 @@ header a {
 }
 .first-soon {
   font-size: 2rem;
+}
+.first a {
+  display: flex;
+  align-items: center;
+}
+.first a:hover {
+  color: var(--Pink);
+  transition: all 0.1s ease;
 }
 .first-teaser {
   flex-direction: row !important;
@@ -680,6 +688,10 @@ header a {
   }
 }
 @media screen and (min-width:1000px) {
+  header {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
   .home .sponsors {
     width: 80vw;
   }
