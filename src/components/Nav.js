@@ -11,23 +11,23 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef }) =>
 
     const introScroll = () => {
         if (menuOpen) onClick();
-        introRef.scrollIntoView();
+        introRef.scrollIntoView({behavior: 'smooth'});
     }
     const aboutScroll = () => {
         if (menuOpen) onClick();
-        aboutRef.scrollIntoView();
+        aboutRef.scrollIntoView({behavior: 'smooth'});
     }
     const hackScroll = () => {
         if (menuOpen) onClick();
-        hackRef.scrollIntoView();
+        hackRef.scrollIntoView({behavior: 'smooth'});
     }
     const visionScroll = () => {
         if (menuOpen) onClick();
-        visionRef.scrollIntoView();
+        visionRef.scrollIntoView({behavior: 'smooth'});
     }
     const sponsorsScroll = () => {
         if (menuOpen) onClick();
-        sponsorsRef.scrollIntoView();
+        sponsorsRef.scrollIntoView({behavior: 'smooth'});
     }
 
     return (<>
