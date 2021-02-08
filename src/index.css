@@ -587,7 +587,7 @@ header a {
     overflow: hidden;
   }
   .home-title {
-    font-size: 40px;
+    font-size: 35px;
   }
   .about {
     position: relative;
@@ -599,7 +599,7 @@ header a {
     top: -20%;
   }
   .about ul li p{
-    font-size: 13px;
+    font-size: 14px;
   }
   .about ul {
     width: 60vw;
@@ -638,7 +638,7 @@ header a {
     padding-right: 100px;
   }
   .hack-content p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .hack-img {
     padding-left: 50px;
@@ -657,7 +657,7 @@ header a {
     align-self: flex-start;
   }
   .vision p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .vision-bg {
     height: 180%;
@@ -754,7 +754,7 @@ header a {
     top: 0px;
   }
   .home-title {
-    font-size: 50px;
+    font-size: 45px;
   }
   .about {
     margin-top: 5%;
