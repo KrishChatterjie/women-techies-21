@@ -324,7 +324,7 @@ header a {
 }
 .first-teaser {
   flex-direction: row !important;
-  font-size: 10px;
+  font-size: 13px;
   color: #000000;
   font-weight: 500;
   text-decoration: none;
@@ -555,18 +555,19 @@ header a {
     margin: 0 auto;
   }
   .first-logo svg {
-    margin: 10px auto;
+    margin: 0px auto;
   }
   .first-soon {
     font-size: 3rem;
   }
   .first-teaser {
-    font-size: 15px;
-    margin: 10px;
+    font-size: 18px;
+    margin-bottom: 6px;
   }
   .first .button {
     height: 40px;
     width: 300px;
+    margin: 5px 0px;
     padding: 0px 5px;
     border-radius: 25px;
     font-size: 18px;
@@ -734,6 +735,9 @@ header a {
   }
   .first-soon {
     font-size: 4rem;
+  }
+  .first-teaser {
+    margin-bottom: 7px;
   }
   .first .button {
     height: 50px;
